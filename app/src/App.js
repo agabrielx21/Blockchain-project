@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import CoinsBar from './components/CoinsBar'; 
-import { SwapWidget } from '@uniswap/widgets'
-import '@uniswap/widgets/fonts.css'
+import Dex from './components/DEX';
 
 function App() {
   const ethers = require('ethers')
@@ -46,9 +45,7 @@ function App() {
           </div>
         )}
     </div>
-    <div className="Uniswap">
-    <SwapWidget />
-  </div>
+    <Dex />
    </div>
   );
 }
