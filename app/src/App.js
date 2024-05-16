@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CoinsBar from './components/CoinsBar'; 
 import Dex from './components/DEX';
+import StakingComponent from './components/Stake';
 
 function App() {
   const ethers = require('ethers')
@@ -46,6 +47,7 @@ function App() {
         )}
     </div>
     <Dex />
+    <StakingComponent />
    </div>
   );
 }

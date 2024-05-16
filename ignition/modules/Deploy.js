@@ -17,5 +17,6 @@ module.exports = buildModule("DeployModule", (m) => {
   m.call(token2, "transfer", [dex, SEND_TOKENS_TO_SWAP_CONTRACT] )
   m.call(router, "createPair", [token, token2, SAME_RATE]);
   // m.call(router, "createPair", [token2, token, SAME_RATE]);
-  return { token, token2, router, dex};
+  const stake = m.contract("Staking", [], {});
+  return { token, token2, router, dex, stake};
 });
